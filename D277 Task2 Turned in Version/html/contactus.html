@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+ <!--1.  Include the following items on each page, using a suitable HTML element:
+•   a title in the head of each document that describes the web page’s individual topic--> 
+<!--WebPage Title-->
+<title>Contact Us</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--The following line links to our style sheet file-->
+<link rel="stylesheet" href="../CSS/contactus.css">
+</head>
+
+
+<body>
+  <!--2.  Include the following semantic elements from Task 1 on each page: 
+    a header containing introductory content (pertaining to the document as a whole or a particular section of a document)-->
+<!--header-->
+<header>
+<div class="header">
+  <h2>CONNECT WITH US</h2>
+   <!--ID selector-->
+  <p id="moto">THE COWBOY STATE </p>
+  </div>
+</header>
+<!--1.  Include the following items on each page, using a suitable HTML element:  a consistent menu that allows the user to navigate to any other page on the site-->
+<!--2.  Include the following semantic elements from Task 1 on each page: a nav to place the links to navigate throughout the site-->
+
+<!--nav-->
+<nav>
+<div class="nav">
+  <a href="../html/index.html" class="active">Home</a>
+  <a href="../html/Cheyenne.html">Cheyenne</a>
+  <a href="../html/casper.html">Casper</a>
+  <a href="../html/Jackson Hole.html">Jackson Hole</a>
+  <a href="../html/contactus.html">Contact Us</a>
+  <!-- B.  Include each of the following elements within your website, using suitable markup: 1.  a link that opens an external website in a new window or tab using the target attribute -->
+  <a href="https://travelwyoming.com/things-to-do/" target="_blank" class="right">Travel Wyoming</a>
+</div>
+</nav>  
+
+<!--Include the following semantic elements from Task 1 on each page:    a section to display the main content of the page-->
+<!--section-->
+    <!-- Add a form on one page of your website by doing the following:
+           Note: The form does not need to include a functional Submit button.
+•          Include text fields for the users first name, the users last name, and the users email address, as well as a confirmation 
+           field for the email address for verification purposes and a text box that allows the user to ask a question.
+•          Ensure all fields contain placeholders.
+           1.  Include JavaScript code that verifies the email fields match when a user enters a second email address. --> 
+           <section>
+           <!--form-->
+           <div class="form"> 
+            <h2>Contact Us</h2>
+            <h2>To Send Us A Message, Use the Below Form</h2>
+                 <form>
+                   <label for="fname">First name:</label><br>
+                   <input type="text" id="fname" name="fname" placeholder="First Name"><br><br>
+      
+                   <label for="lname">Last name:</label><br>
+                   <input type="text" id="lname" name="lname" placeholder="Last Name"><br><br>
+      
+                   <label type="email">Enter Email:</label><br>
+                   <input type="email" id="email1" placeholder="Enter Email"onchange="CompareFields('email1','email2',true)"><br><br>
+      
+                   <label for="text">Confirm Email:</label><br>
+                   <input type="email" id="email2" placeholder="Confirm Email" onchange="CompareFields('email1','email2',true)"><br><br>
+      
+                   <label for="question">Ask us a question</label><br>
+                   <textarea id="question" name="Ask Us A Question" rows="4" cols="50"
+                    placeholder="Send us a message"></textarea>
+                   </textarea><br>
+                   <button>Submit</button>
+                 </form> 
+           
+           <!--1.	Include JavaScript code that verifies the email fields match when a user enters a second email address.-->
+           <script type="text/javascript">
+            function CompareFields(f1, f2, caseinsensitive)
+            {
+               var val1 = document.getElementById(f1).value;
+               var val2 = document.getElementById(f2).value;
+               if( caseinsensitive )
+               {
+                  val1 = val1.toUpperCase();
+                  val2 = val2.toUpperCase();
+               }
+               val1 = val1.replace(/^\s*/,"");
+               val1 = val1.replace(/\s*$/,"");
+               if( val1.length == 0 ) { return; }
+               val2 = val2.replace(/^\s*/,"");
+               val2 = val2.replace(/\s*$/,"");
+               if( val2.length == 0 ) { return; }
+               if( val1 == val2 ) { return; }
+               // An alert box is used for verification failures.
+                             alert("The email fields must to be identical.");
+            }
+            </script>
+    </div>
+  </div>
+
+  <div class="main">
+    <!--aside-->
+    <aside>
+      <p><div class="img">
+        <!--Image-->
+        <img src="../images/contactus1.png" alt="Cowgirl contact us">
+        </div> </p>
+    </aside>
+   
+    <!--table-->
+    <!-- B.  Include each of the following elements within your website, using suitable markup: an HTML-coded table consisting of 
+      3 to 6 columns and 3 to 6 rows to organize content -->            
+<table>
+     <tr>
+      <!--Links-->
+      <!--B.  Include each of the following elements within your website, using suitable markup: 
+        1.  a link that opens an external website in a new window or tab using the target attribute-->
+       <th><a href="https://www.barrasso.senate.gov/public/" target="_blank">Senator John Barrasso, M.D.</a></th>
+       <th><a href="https://www.lummis.senate.gov/" target="_blank">Senator Cynthia Lummis</a></th>
+       <th><a href="https://hageman.house.gov/" target="_blank">Representative Harriet Hageman<</a></th>
+     </tr>
+     <tr>
+       <td>100 East B Street, Suite 2004 Casper, WY 82601</td>
+       <td>100 E. B Street, Suite 3201 Casper, WY 82601</td>
+       <td>100 E. B Street, Suite 4003 Casper, WY 82601</td>
+     </tr>
+     <tr>
+       <td>(307) 261-6413</td>
+       <td>(307) 261-6572</td>
+       <td>(307) 261-6595</td>
+     </tr>
+     <tr>
+        <td><a href="mailto:barrasso.senate.gov">Send John an email</a></td>
+        <td><a href="mailto:slummis.senate.gov">Send Cynthia an email</a></td>
+        <td><a href="mailto:hageman.house.gov">Send Harriet an email</a></td>
+ </table>
+   </div>
+      </div>
+</div>
+<!--Footer-->
+<div class="footer">
+  <h2>Copyright 2024 Ralph Moore</h2>
+  </div> 
+</div>
+</section>
+</body>
+
+</html>
+  </div> 
+  <!--*****************************************************END OF CODE***************************************************************-->

@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+}
+
+/* Style the body */
+/*C.  Create an external CSS file with the following CSS rules and formatting, and apply these rules to enhance your website content:
+1.  each of the following styles for text: •   one font-family declaration*/
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+/* Header/Title */
+.header {
+  background-image: url(../images/banner.png);
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  padding: 80px;
+  text-align: center;
+  color: rgb(246, 255, 0);
+}
+
+/* Increase the font size of the heading */
+.header h1 {
+  font-size: 70px;
+}
+
+/* Sticky navbar - toggles between relative and fixed, depending on the scroll position.*/
+.nav {
+  overflow: hidden;
+  background-color: #333;
+  position: -webkit-sticky;
+  top: 0;
+}
+
+/* Style the navigation bar links */
+.nav a {
+  float: left;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 20px;
+  text-decoration: none;
+}
+
+/* Right-aligned link */
+/*C.  Create an external CSS file with the following CSS rules and formatting, and apply these rules to enhance your website content: 
+2.  a float property to position at least one HTML element to the side of another in your web page*/
+.nav a.right {
+  float: right;
+}
+
+/* Change color on hover */
+.nav a:hover {
+  background-color: #9b9b9b;
+  color: black;
+}
+
+/* Active/current link */
+.nav a.active {
+  background-color: #666;
+  color: white;
+}
+
+/* Column container */
+.row {  
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  -ms-flex-wrap: wrap; /* IE10 */
+  flex-wrap: wrap;
+ }
+
+/* Sidebar/left column */
+.side {
+  -ms-flex: 30%; /* IE10 */
+  flex: 30%;
+  background-color: #f1f1f1;
+  padding: 20px;
+  background-color: rgba(131, 15, 15, 0.677);
+  background-image: url(../images/img4.jpg);
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+}
+
+/* Main column */
+.main {   
+  -ms-flex: 70%; /* IE10 */
+  flex: 70%;
+  background-color: rgba(131, 15, 15, 0.677);
+  padding: 20px;
+  background-image: url(../images/background.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #ddd;
+}
+
+/* C.  Create an external CSS file with the following CSS rules and formatting, and apply these rules to enhance your website content: 
+•   one class selector that is used at least two times to style HTML elements */
+.lists {
+  color: #ffffff;
+  background-color: #424040;
+  padding: 0px;
+  opacity: 85%;
+  border: blue;
+  border-style: inset;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+}
+
+/* C.  Create an external CSS file with the following CSS rules and formatting, and apply these rules to enhance your website content: 
+•   one class selector that is used at least two times to style HTML elements */
+.form {
+  color: #ffffff;
+  background-color: #424040;
+  padding: 0px;
+  opacity: 85%;
+  border: blue;
+  border-style: inset;
+  padding-left: 0.5rem;
+    margin-left: 0.5rem;
+  }
+
+/* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 700px) {
+  .row {   
+    flex-direction: column;
+  }
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+  .nav a {
+    float: none;
+    width: 100%;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  thead tr td a { color: rgb(131, 131, 131); }
+}
+
+td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #0d00ff;
+  color:#f1f1f1
+}
+
+th {
+  padding: 8px;
+  text-align: center;
+  border-bottom: 1px solid #ddd;
+  }
+tr:hover {background-color: rgb(159, 159, 159);}
+
+
+a:link
+{
+    color:#ffffff;
+}
+
+a:visited
+{
+    color:#ffffff;
+}
+
+a:hover 
+{
+    color:#00ff3c;
+}
+
+a:active {
+  color: yellow;
+}
+
+img {
+  float: left;
+  height: 100%;
+   width: 20vw;
+  height: 15vh;
+  border: blue;
+  border-style: inset;
+  
+}
+
+/* Footer */
+.footer {
+  text-align: left;
+  background: #000000;
+  color: #ddd;
+  height: 100px;
+  width: 100%;
+}
+
+aside {
+  width: 40%;
+  padding-left: 0.5rem;
+  margin-left: 0.5rem;
+  float: right;
+  background-color: #000000;
+  box-shadow: inset 5px 0 5px -5px #29627e;
+  font-style: italic;
+  color: #ffffff;
+  border: blue;
+  border-style: inset;
+}
+
+aside > p {
+  margin: 0.5rem;
+}
+
+/*C.  Create an external CSS file with the following CSS rules and formatting, and apply these rules to enhance your website content: 
+one element selector to style the HTML elements*/
+h5 {
+  text-align:center !important;
+  font-size: 20px;
+  }
+
+  /*C.  Create an external CSS file with the following CSS rules and formatting, and apply these rules to enhance your website content: 
+  one ID selector to format specific elements of a page*/
+  #moto {
+    font-family:cursive;
+    font-size: 40px;
+    font-weight: bolder;
+   }
+
+   
+   .parent {
+    background-image: url(../images/child4.jpg);
+    position: relative;
+    width: 50%;
+    height:fit-content;
+    border: 6px solid rgb(17, 0, 255);
+    margin: auto;
+    text-align: center;
+  }
+  
+  .child {
+    border-radius: 10%;
+    width: 100px;
+    height: 100px;
+    margin: 20px;
+  }
+  
+  
+  /*absolute*/
+  .two {
+    position:absolute;
+    right: 100px
+  }
+  
+  /*relative*/
+  .three {
+    position:relative;
+  }
+  
+/*------------------------------------------------------------ END OF CODE-------------------------------------------------------------*/
+  
